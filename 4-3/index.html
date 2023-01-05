@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="windth=device-whidth,initial-scale=1.0"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+        <title>sample</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- Vuejsのイベントハンドリングを@clickで紐づける -->
+            <button class="button" @click="increment">+1</button> <!-- インクリメントメソッドに紐づけ -->
+            <button class="button" @click="decrement">-1</button> <!-- デクリメントメソッドに紐づけ -->
+            <!-- Mustache（マスタッシュ構文）でVueインスタンスのdata関数と紐づける -->
+            <p>{{count}}</p>
+            <!-- 条件付きレンダリング（v-if）の記述例 -->
+            <!-- 算出プロパティによる記述例 -->
+            <div>
+                <!-- 条件1 -->
+                <p class="passed" v-if="count >= 80" >ランクA</p>
+                <!-- 条件2 -->
+                <p class="passed" v-else-if="count >= 70" >ランクB</p>
+                <!-- 条件3 -->
+                <p class="passed" v-else="count >= 60" >ランクC</p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./script/script.js"></script>
+    </body>
+</html>
