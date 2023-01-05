@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="windth=device-whidth,initial-scale=1.0"/>
+        <title>sample</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- Vuejsのイベントハンドリングを@clickで紐づける -->
+            <button @click="handleClick">Push</button>
+            <!-- Mustache（マスタッシュ構文）でVueインスタンスのdata関数と紐づける -->
+            <p>{{text}}</p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./script/script.js"></script>
+    </body>
+</html>
