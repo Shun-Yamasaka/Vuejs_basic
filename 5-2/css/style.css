@@ -1,0 +1,26 @@
+a{
+    text-decoration:none;
+}
+
+.header-menu{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    padding:12px;
+    margin:0px;
+    background:#eee;
+}
+
+.menu-item{
+    padding:8px;
+    font-size:18px;
+    list-style:none;
+}
+
+.menu-item a{
+    color:#111;
+}
+
+.mennu-item a:hover{
+    border-bottom:solid 1px #111;
+}

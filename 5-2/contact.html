@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="windth=device-whidth,initial-scale=1.0"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+        <title>sample</title>
+    </head>
+    <body>
+        <div id="app">
+            <ul class="header-menu">
+                <!-- menus配列からデータを取得v-forで配列の数だけ処理する -->
+                <li v-for="(item, i) in menus":key="i" class="menu-item">
+                    <a :href="item.path">{{item.label}}</a>
+                </li>
+            </ul>
+            <h1>contact page</h1>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./script/script.js"></script>
+    </body>
+</html>
