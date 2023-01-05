@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="windth=device-whidth,initial-scale=1.0"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+        <title>sample</title>
+    </head>
+    <body>
+        <!-- v-model（双方向バインディング）を利用してバリデーション機能を実装 -->
+        <div id="app">
+            <div class="form-area__name">
+                <p>名前</p>
+                <input v-model="name" type="text" name="name" />
+                <!-- エラー文言用テキスト（v-ifにより4文字未満の場合trueで返ってくるためエラー文言が出力される） -->
+                <p v-if=" isInValidName" class="error">4文字以上で入力してください</p>
+            </div>
+            <div class="form-area__email">
+                <p>Eメールアドレス</p>
+                <input v-model="email" type="text" name="email" />
+                <!-- エラー文言用テキスト -->
+                <p v-if=" isInValidEmail" class="error">メールアドレスの形式で入力してください</p>
+            </div>
+            <div class="form-area__tel">
+                <p>電話番号</p>
+                <input v-model="tel" type="text" name="tel" />
+                <!-- エラー文言用テキスト -->
+                <p v-if=" isInValidTel" class="error">電話番号は数字8文字以上で入力してください</p>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./script/script.js"></script>
+    </body>
+</html>
