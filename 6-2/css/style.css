@@ -1,3 +1,4 @@
+/* 閉じている状態で適用されているスタイル */
 .btn-humburger {
   width: 56px;
   height: 56px;
@@ -23,6 +24,7 @@
   left: 0;
 }
 
+/* 開いている状態で適用されているスタイル */
 .btn-humburger.is-active > div:first-child {
   -webkit-transform: translateY(11px) rotate(45deg);
   transform: translateY(11px) rotate(45deg);
