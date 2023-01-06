@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="windth=device-whidth,initial-scale=1.0"/>
+        <title>sample</title>
+    </head>
+    <body>
+        <div id="app">
+            <article class="wrap">
+                <section class="todo-form">
+                    <!-- TODO入力とaddTodoメソッドに紐づけるボタンを配置 -->
+                    <input type="text" name="todo-text" class="input-text" placeholder="please input todo" :value="text" @input="inputText"/>
+                    <button class="add-button" @click="addTodo">ADD TODO</button>
+                </section>
+                <section class="list-area">
+                    <div class="area-incomplete">
+                        <p class="todo-title">incomplete items</p>
+                        <!-- todos配列を出力 -->
+                        <ul class="todo-area">
+                            <li v-for="(item, i) in incompleteTodo" :key="i" class="list">
+                                <span class="list-label">{{item.text}}</span>
+                                <span class="button-area">
+                                    <button class="list-button button-done" @click="toggleIsDone(item.id)">DONE</button>
+                                    <button class="list-button button-delete" @click="deleteTodo(item.id)">DELETE</button>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="area-complete">
+                        <p class="todo-title">complete items</p>
+                        <ul class="todo-area">
+                            <li v-for="(item, i) in doneTodo" :key="i" class="list">
+                                <span class="list-label">{{item.text}}</span>
+                                <span class="button-area">
+                                    <button class="list-button" @click="toggleIsDone(item.id)">RETURN</button>
+                                    <button class="list-button button-delete" @click="deleteTodo(item.id)">DELETE</button>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./script/script.js"></script>
+    </body>
+</html>
