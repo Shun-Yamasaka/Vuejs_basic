@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="windth=device-whidth,initial-scale=1.0"/>
+        <link rel="stylesheet" href="./css/style.css" />
         <title>sample</title>
     </head>
     <body>
@@ -29,6 +30,7 @@
                     </div>
                     <div class="area-complete">
                         <p class="todo-title">complete items</p>
+                        <!-- done押下したリストを出力 -->
                         <ul class="todo-area">
                             <li v-for="(item, i) in doneTodo" :key="i" class="list">
                                 <span class="list-label">{{item.text}}</span>
